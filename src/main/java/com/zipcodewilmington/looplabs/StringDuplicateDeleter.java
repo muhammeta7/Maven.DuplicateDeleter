@@ -12,13 +12,39 @@ public final class StringDuplicateDeleter extends DuplicateDeleter<String> {
 
     @Override
     public String[] removeDuplicates(int maxNumberOfDuplications) {
-        return new String[0];
+
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < array.length; i++) {
+            int counter = countDuplicates(i);
+            if (counter < maxNumberOfDuplications) {
+                sb.append(array[i]).append(" ");
+            }
+        }
+
+        String[] answer = sb.toString().split(" ");
+        if ("".equals(answer[0])) {
+            return new String[0];
+        } else {
+            return answer;
+        }
+
     }
 
     @Override
     public String[] removeDuplicatesExactly(int exactNumberOfDuplications) {
-        return new String[0];
+
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < array.length; i++) {
+            int counter = countDuplicates(i);
+
+            if (counter != exactNumberOfDuplications) {
+                sb.append(array[i]).append(" ");
+            }
+        }
+        return sb.toString().split(" ");
+
     }
 
-
 }
+
+
