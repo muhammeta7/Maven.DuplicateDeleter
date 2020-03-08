@@ -15,7 +15,7 @@ public final class IntegerDuplicateDeleter extends DuplicateDeleter<Integer> {
 
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < array.length ; i++) {
-            int counter = countDuplicates(i);
+            int counter = countOccurences(i);
             if(counter < maxNumberOfDuplications){
                 sb.append(array[i]);
             }
@@ -29,7 +29,7 @@ public final class IntegerDuplicateDeleter extends DuplicateDeleter<Integer> {
 
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < array.length; i++) {
-            int counter = countDuplicates(i);
+            int counter = countOccurences(i);
             if (counter != exactNumberOfDuplications) {
                 sb.append(array[i]);
             }
