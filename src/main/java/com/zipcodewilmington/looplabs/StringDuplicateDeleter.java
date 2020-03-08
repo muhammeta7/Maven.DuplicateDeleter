@@ -6,8 +6,8 @@ package com.zipcodewilmington.looplabs;
  */
 public final class StringDuplicateDeleter extends DuplicateDeleter<String> {
 
-    public StringDuplicateDeleter(String[] intArray) {
-        super(intArray);
+    public StringDuplicateDeleter(String[] stringArray) {
+        super(stringArray);
     }
 
     @Override
